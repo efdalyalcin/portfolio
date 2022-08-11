@@ -1,0 +1,11 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 32px;
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+}
