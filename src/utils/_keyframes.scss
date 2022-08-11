@@ -1,0 +1,8 @@
+@keyframes rotateHexa {
+  17% {transform: translate(45px, 0);}
+  33% {transform: translate(60px, 30px);}
+  50%{transform: translate(45px, 60px);}
+  67%{transform: translate(0, 60px);}
+  83%{transform: translate(-15px, 30px);}
+  100%{transform: translate(0,0);}
+}

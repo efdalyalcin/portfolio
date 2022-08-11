@@ -1,11 +1,49 @@
+@import '../../utils/main.scss';
+
 .NavBar {
+  font-family: 'DynaPuffSemiBold', cursive;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   padding: 32px;
+  padding-right: $sectionPaddingMain;
+
+  &__home {
+    position: relative;
+    height: 40px;
+    width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+  }
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -14px; 
+    left: -8px;
+    border-radius: 100%;
+    background-color: $c-imperialRed;
+    animation: rotateHexa 5s linear infinite;
+  }
 
   &__list {
     display: flex;
     gap: 20px;
+  }
+
+  &__item {
+    color: $c-cultured;
+    transition: color .5s;
+
+    &:hover {
+      color: $c-imperialRed;
+    }
   }
 }

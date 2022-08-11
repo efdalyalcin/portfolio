@@ -11,7 +11,10 @@ const navComponents = [
 export default function NavBar() {
   return (
     <nav className="NavBar">
-      <div>EY</div>
+      <div className="NavBar__home">
+        <div className="NavBar__icon" />
+        EY
+      </div>
 
       <div className="NavBar__list">
         {navComponents.map((comp) => (
