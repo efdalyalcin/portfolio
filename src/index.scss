@@ -1,0 +1,34 @@
+@import './utils/main.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'DynaPuff', cursive;
+  scroll-behavior: smooth;
+}
+
+body,
+ul,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $c-eerieBlack;
+  color: $c-cultured;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
