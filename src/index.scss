@@ -19,11 +19,6 @@ h3 {
   padding: 0;
 }
 
-body {
-  background-color: $c-eerieBlack;
-  color: $c-cultured;
-}
-
 ul {
   list-style: none;
 }
@@ -31,19 +26,4 @@ ul {
 a {
   color: unset;
   text-decoration: unset;
-}
-
-// scroolbar modification
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px $c-eerieBlack; 
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: $rich-black-fogra-39; 
-  border-radius: 10px;
 }

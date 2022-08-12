@@ -1,7 +1,7 @@
-import cn from 'classnames';
-import { useEffect } from 'react';
 import { useTheme } from '../../context/ThemeProvider';
+import cn from 'classnames';
 import './NavBar.scss';
+import './ThemeIcon.scss';
 
 const navComponents = [
   {id: 1, name: 'About'},
@@ -13,25 +13,25 @@ const navComponents = [
 export default function NavBar() {
   const { isDarkTheme, toggleTheme } = useTheme();
 
-  useEffect(
-    () => {
-      console.log(isDarkTheme);
-    },
-    [isDarkTheme],
-  )
-
   return (
     <nav className="NavBar">
-      <div className="NavBar__home">
+      <div className={cn("NavBar__home", {'NavBar__home--dark': isDarkTheme})}>
         <div className="NavBar__icon" />
         EY
       </div>
 
       <div className="NavBar__list">
-        <div className="NavBar__theme-icon">
-          <input 
-            type="checkbox"
-            onChange={toggleTheme}
+        <div 
+          className={cn("ThemeIcon", 
+            {'ThemeIcon--dark': isDarkTheme})}
+          onClick={toggleTheme} 
+        >
+          <div className="ThemeIcon__sun" />
+          <div className="ThemeIcon__moon" />
+          <div className={cn("ThemeIcon__cover", {
+              "ThemeIcon__cover--light": !isDarkTheme,
+              "ThemeIcon__cover--dark": isDarkTheme,
+            })} 
           />
         </div>
 
@@ -44,6 +44,7 @@ export default function NavBar() {
               "NavBar__experience": comp.name === 'Experience',
               "NavBar__contact": comp.name === 'Contact',
               "NavBar__resume": comp.name === 'Resume',
+              "NavBar__item--dark": isDarkTheme,
             })}
           >
             {comp.name}

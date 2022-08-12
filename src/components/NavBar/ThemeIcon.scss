@@ -1,0 +1,54 @@
+@import '../../utils/main.scss';
+
+.ThemeIcon {
+  position: relative;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 64px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: $c-lightGray;
+
+  transition: background-color $transitionTime;
+
+  &--dark {
+    background-color: $c-bloodRed;
+  }
+
+  &__sun,
+  &__moon {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+  }
+  
+  &__sun {
+    background-image: url('./sun.svg');
+  }
+
+  &__moon {
+    background-image: url('./moon.svg');
+  }
+
+  &__cover {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    
+    background-color: $c-cultured;
+    transition: left $transitionTime, background-color $transitionTime;
+  }
+
+  &__cover--light {
+    left: 34px;
+  }
+
+  &__cover--dark {
+    left: 4px;
+    background-color: $c-eerieBlack;
+  }
+}
