@@ -1,4 +1,6 @@
 import cn from 'classnames';
+import { useEffect } from 'react';
+import { useTheme } from '../../context/ThemeProvider';
 import './NavBar.scss';
 
 const navComponents = [
@@ -9,6 +11,15 @@ const navComponents = [
 ];
 
 export default function NavBar() {
+  const { isDarkTheme, toggleTheme } = useTheme();
+
+  useEffect(
+    () => {
+      console.log(isDarkTheme);
+    },
+    [isDarkTheme],
+  )
+
   return (
     <nav className="NavBar">
       <div className="NavBar__home">
@@ -17,6 +28,13 @@ export default function NavBar() {
       </div>
 
       <div className="NavBar__list">
+        <div className="NavBar__theme-icon">
+          <input 
+            type="checkbox"
+            onChange={toggleTheme}
+          />
+        </div>
+
         {navComponents.map((comp) => (
           <a 
             href={`#${comp.name}`}

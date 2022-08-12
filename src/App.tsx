@@ -4,6 +4,8 @@ import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import NavBar from './components/NavBar/NavBar';
 
+// create a theme context
+
 function App() {
   return (
     <div className="App">
