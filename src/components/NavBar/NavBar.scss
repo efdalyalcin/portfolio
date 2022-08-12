@@ -20,6 +20,11 @@
     align-items: center;
 
     font-size: 24px;
+    color: $c-eerieBlack;
+
+    &--dark {
+      color: $c-cultured;
+    }
   }
 
   &__icon {
@@ -35,12 +40,17 @@
 
   &__list {
     display: flex;
+    align-items: center;
     gap: 20px;
   }
 
   &__item {
-    color: $c-cultured;
-    transition: color .5s;
+    color: $c-eerieBlack;
+    transition: color $transitionTime;
+
+    &--dark {
+      color: $c-cultured;
+    }
 
     &:hover {
       color: $c-imperialRed;
