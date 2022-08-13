@@ -1,0 +1,10 @@
+.Home {
+  height: 100vh;
+  padding: 40px 120px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
