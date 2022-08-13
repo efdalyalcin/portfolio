@@ -2,6 +2,7 @@ import { useTheme } from '../../context/ThemeProvider';
 import cn from 'classnames';
 import './NavBar.scss';
 import './ThemeIcon.scss';
+import { useState } from 'react';
 
 const navComponents = [
   {id: 1, name: 'About'},
@@ -14,7 +15,7 @@ export default function NavBar() {
   const { isDarkTheme, toggleTheme } = useTheme();
 
   return (
-    <nav className="NavBar">
+    <nav className={cn("NavBar", {'NavBar--dark': isDarkTheme})}>
       <div className={cn("NavBar__home", {'NavBar__home--dark': isDarkTheme})}>
         <div className="NavBar__icon" />
         EY
