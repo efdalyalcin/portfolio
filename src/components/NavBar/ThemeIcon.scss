@@ -10,7 +10,7 @@
   width: 64px;
   height: 32px;
   border-radius: 16px;
-  background-color: $c-lightGray;
+  background-color: $c-cultured;
 
   transition: background-color $transitionTime;
 
@@ -39,7 +39,7 @@
     width: 26px;
     border-radius: 50%;
     
-    background-color: $c-cultured;
+    background-color: $c-lightGray;
     transition: left $transitionTime, background-color $transitionTime;
   }
 
