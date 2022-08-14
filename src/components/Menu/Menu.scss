@@ -11,6 +11,10 @@
 
   background-color: $c-cultured;
 
+  &--dark{
+    background-color: $c-eerieBlack;
+  }
+
   &__lines {
     position: absolute;
     width: 100%;
@@ -18,6 +22,10 @@
 
     background-color: $c-eerieBlack;
     border-radius: 20%;
+
+    &--dark {
+      background-color: $c-cultured;
+    }
   }
 
   &__line1,
@@ -51,6 +59,10 @@
       transition: background-color $transitionTime,
         transform $transitionTime,
         width $transitionTime;
+
+      &--dark {
+        background-color: $c-cultured;
+      }
     }
 
     &--left {
@@ -136,7 +148,7 @@
   }
 
   &__item {
-    margin-top: 8px;
+    margin-top: 16px;
 
     &:first-child {
       margin-top: 0;

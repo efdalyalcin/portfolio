@@ -32,14 +32,22 @@ export const Menu: React.FC<Props> = ({isDesktop}) => {
   return (
     <div>
       <button 
-        className="Hamburger"
+        className={cn("Hamburger", {"Hamburger--dark": isDarkTheme})}
         onClick={menuHandler}
       >
-        <div className="Hamburger__lines Hamburger__line1" />
-        <div className="Hamburger__lines Hamburger__line2" />
+        <div className={cn("Hamburger__lines Hamburger__line1", {
+            "Hamburger__lines--dark": isDarkTheme,
+            "Hamburger__line1--dark": isDarkTheme,
+          })} 
+        />
+        <div className={cn("Hamburger__lines Hamburger__line2", {
+            "Hamburger__lines--dark": isDarkTheme,
+            "Hamburger__line2--dark": isDarkTheme,
+          })} 
+        />
         <div className="Hamburger__line3">
-          <div className="Hamburger__line3--left" />
-          <div className="Hamburger__line3--right" />
+          <div className={cn("Hamburger__line3--left", {"Hamburger__line3--left--dark": isDarkTheme})} />
+          <div className={cn("Hamburger__line3--right", {"Hamburger__line3--right--dark": isDarkTheme})} />
         </div>
       </button>
 
