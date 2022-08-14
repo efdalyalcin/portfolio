@@ -151,6 +151,8 @@
   }
 
   &__toggler {
+    cursor: pointer;
+
     background-color: transparent;
     border: none;
   }
@@ -164,13 +166,14 @@
   &__cross-label {
     position: absolute;
     top: -64px;
-    right: -38px;
+    right: -36px;
 
     display: flex;
     align-items: center;
 
     text-transform: uppercase;
     color: $c-eerieBlack;
+    font-family: 'DynaPuff', cursive;
 
     transform: rotate(-90deg);
     transition: color $transitionTime;

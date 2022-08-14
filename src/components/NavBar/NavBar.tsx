@@ -17,6 +17,12 @@ export default function NavBar() {
 
   const [isDesktop, setDesktop] = useState(window.innerWidth >= 768);
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+};
+
   const updateMedia = () => {
     setDesktop(window.innerWidth >= 768);
   };
@@ -28,7 +34,10 @@ export default function NavBar() {
 
   return (
     <nav className={cn("NavBar", {'NavBar--dark': isDarkTheme})}>
-      <div className={cn("NavBar__home", {'NavBar__home--dark': isDarkTheme})}>
+      <div 
+        className={cn("NavBar__home", {'NavBar__home--dark': isDarkTheme})}
+        onClick={goToTop}
+      >
         <div className="NavBar__icon" />
         EY
       </div>
