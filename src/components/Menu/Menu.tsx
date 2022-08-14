@@ -1,48 +1,86 @@
 import cn from 'classnames';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from '../../context/ThemeProvider';
 import { navComponents } from '../NavBar/NavBar';
 import './Menu.scss';
 
-export default function Menu() {
+type Props = {
+  isDesktop: boolean;
+}
+
+export const Menu: React.FC<Props> = ({isDesktop}) => {
   const { isDarkTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const menuHandler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  if (isDesktop) {
+    setIsMenuOpen(false);
+  }
+
+  const closeOnScroll = () => {
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", closeOnScroll);
+    return () => window.removeEventListener("scroll", closeOnScroll);
+  });
+
   return (
-    <menu className="Menu" id="Menu">
-      <ul className="Menu__list">
-        {navComponents.map((comp) => (
-          <li 
-            key={comp.id} 
-            className={cn("Menu__item", {"Menu__item--dark": isDarkTheme,})}
-          >
-            <a 
-              href={`#${comp.name}`}
-              key={comp.id}
-              className={cn("Menu__link", {
-                "Menu__link--dark": isDarkTheme,
-              })}
-            >
-              {comp.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <a href="#" className="Menu__toggler">
-        <div className="Menu__close">
-          <div className="Menu__cross-label">
-            <span className="Menu__line"></span>
-            Close
-          </div>
-
-          <div className="Menu__cross">
-            <div className="Menu__cross-line1"></div>
-            <div className="Menu__cross-line2"></div>
-            <div className="Menu__cross-line3"></div>
-          </div>
+    <div>
+      <button 
+        className="Hamburger"
+        onClick={menuHandler}
+      >
+        <div className="Hamburger__lines Hamburger__line1" />
+        <div className="Hamburger__lines Hamburger__line2" />
+        <div className="Hamburger__line3">
+          <div className="Hamburger__line3--left" />
+          <div className="Hamburger__line3--right" />
         </div>
-      </a>
-    </menu>
-  )
+      </button>
+
+      <menu className={cn("Menu", {"Menu__closed": !isMenuOpen, "Menu__open": isMenuOpen})} id="Menu">
+        <ul className="Menu__list">
+          {navComponents.map((comp) => (
+            <li 
+              key={comp.id} 
+              className={cn("Menu__item", {"Menu__item--dark": isDarkTheme,})}
+            >
+              <a 
+                href={`#${comp.name}`}
+                key={comp.id}
+                className={cn("Menu__link", {
+                  "Menu__link--dark": isDarkTheme,
+                })}
+              >
+                {comp.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <button 
+          className="Menu__toggler"
+          onClick={menuHandler}
+        >
+          <div className="Menu__close">
+            <div className="Menu__cross-label">
+              <span className="Menu__line"></span>
+              Close
+            </div>
+
+            <div className="Menu__cross">
+              <div className="Menu__cross-line1"></div>
+              <div className="Menu__cross-line2"></div>
+              <div className="Menu__cross-line3"></div>
+            </div>
+          </div>
+        </button>
+      </menu>
+    </div>
+  );
 }

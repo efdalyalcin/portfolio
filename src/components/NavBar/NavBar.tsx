@@ -3,7 +3,7 @@ import { useTheme } from '../../context/ThemeProvider';
 import cn from 'classnames';
 import './NavBar.scss';
 import './ThemeIcon.scss';
-import Menu from '../Menu/Menu';
+import { Menu } from '../Menu/Menu';
 
 export const navComponents = [
   {id: 1, name: 'About'},
@@ -67,7 +67,7 @@ export default function NavBar() {
         </div>
       )}
 
-      {!isDesktop && (<Menu />)}
+      {!isDesktop && (<Menu isDesktop={isDesktop} />)}
     </nav>
   );
 }
