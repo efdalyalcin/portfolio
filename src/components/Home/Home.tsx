@@ -5,10 +5,11 @@ export default function Home() {
     <div className="Home">
       <div className="Home__info">
         <p>Hi, my name is</p>
-        <h1>Efdal YALCIN</h1>
-        <h2>I am a FORNT-END DEVELOPER</h2>
-        <h2>I build things for the WEB</h2>
+        <h1 className="Home__name">Efdal YALCIN</h1>
+        <h2>I am a <span>FORNT-END DEVELOPER</span></h2>
+        <p>I build creative things for the WEB</p>
       </div>
+      <div className="Home__image" />
     </div>
   );
 }

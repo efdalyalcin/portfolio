@@ -1,0 +1,6 @@
+@mixin hoverState($_property, $_toValue) {
+  transition: #{$_property} $transitionTime;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
