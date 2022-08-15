@@ -122,6 +122,12 @@
 
   background-color: $c-lightGray;
 
+  &__themeIcon {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
   &__closed {
     position: absolute;
     top: 0;
