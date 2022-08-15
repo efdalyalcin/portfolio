@@ -24,9 +24,16 @@
   &__image {
     height: 400px;
     width: 400px;
+
+    border-radius: 16px;
+
     background-image: url('../../images/efdalSketch.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
+
+    &:hover {
+      background-image: url('../../images/efdalImg.jpg');
+    }
   }
 }
