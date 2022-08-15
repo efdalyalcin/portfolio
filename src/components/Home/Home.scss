@@ -24,6 +24,9 @@
   &__image {
     height: 400px;
     width: 400px;
-    // background-image: url('../../images/efdalMemoji.png'); 
+    background-image: url('../../images/efdalSketch.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
   }
 }
