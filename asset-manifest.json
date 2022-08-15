@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.0fc101ea.css",
-    "main.js": "/portfolio/static/js/main.e7cd447b.js",
+    "main.css": "/portfolio/static/css/main.d95d23bd.css",
+    "main.js": "/portfolio/static/js/main.657f453b.js",
     "static/media/DynaPuff-SemiBold.ttf": "/portfolio/static/media/DynaPuff-SemiBold.7d5a22ede4ba1ef762c9.ttf",
     "static/media/DynaPuff-Regular.ttf": "/portfolio/static/media/DynaPuff-Regular.56fde79e6a4cd9651e99.ttf",
     "static/media/DynaPuff-Bold.ttf": "/portfolio/static/media/DynaPuff-Bold.ef8a25f87f5756f384f5.ttf",
     "static/media/moon.svg": "/portfolio/static/media/moon.354ec79e94d237a8198f.svg",
     "static/media/sun.svg": "/portfolio/static/media/sun.0117de3960fb5aa9cbca.svg",
     "index.html": "/portfolio/index.html",
-    "main.0fc101ea.css.map": "/portfolio/static/css/main.0fc101ea.css.map",
-    "main.e7cd447b.js.map": "/portfolio/static/js/main.e7cd447b.js.map"
+    "main.d95d23bd.css.map": "/portfolio/static/css/main.d95d23bd.css.map",
+    "main.657f453b.js.map": "/portfolio/static/js/main.657f453b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fc101ea.css",
-    "static/js/main.e7cd447b.js"
+    "static/css/main.d95d23bd.css",
+    "static/js/main.657f453b.js"
   ]
 }
