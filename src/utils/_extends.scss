@@ -2,3 +2,15 @@
   min-width: $minWidth;
   max-width: $maxWidth;
 }
+
+%paddingSection {
+  padding: $sectionPaddingMainVer $sectionPaddingMainHor;
+
+  @include mediaMaxWidth($tabletWidth) {
+    padding: $sectionPaddingTabletVer $sectionPaddingTabletHor;
+  }
+
+  @include mediaMaxWidth($mobileWidth) {
+    padding: $sectionPaddingMobileVer $sectionPaddingMobileHor;
+  }
+}

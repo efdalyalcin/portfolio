@@ -11,13 +11,21 @@ $c-transparentEerieBlack: rgba(22, 26, 29, .7);
 $c-transparentCultured: rgba(245, 243, 244, .7);
 
 // paddings
-$sectionPaddingMain: 120px;
+$sectionPaddingMainVer: 40px;
+$sectionPaddingMainHor: 120px;
+$sectionPaddingTabletVer: 24px;
+$sectionPaddingTabletHor: 64px;
+$sectionPaddingMobileVer: 16px;
+$sectionPaddingMobileHor: 16px;
 
 // transition time
 $transitionTime: 0.5s;
 
 // width
-$maxWidth: 1480px;
+$maxWidth: 1280px;
+$largeTabletWidth: 992px;
+$tabletWidth: 768px;
+$mobileWidth: 480px;
 $minWidth: 360px; 
 
 // Color Palette

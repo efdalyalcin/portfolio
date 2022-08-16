@@ -5,8 +5,10 @@
   margin: 0 auto;
 
   font-family: 'DynaPuffSemiBold', cursive;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
 
   display: flex;
@@ -14,10 +16,18 @@
   align-items: center;
 
   padding: 16px 32px;
-  padding-right: $sectionPaddingMain;
+  padding-right: $sectionPaddingMainHor;
   background-color: $c-transparentCultured;
 
   transition: background-color $transitionTime;
+
+  @include mediaMaxWidth($tabletWidth) {
+    padding-right: $sectionPaddingTabletHor;
+  }
+
+  @include mediaMaxWidth($mobileWidth) {
+    padding-right: $sectionPaddingMobileHor;
+  }
 
   &--dark {
     background-color: $c-transparentEerieBlack;

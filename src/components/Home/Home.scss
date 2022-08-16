@@ -2,16 +2,23 @@
 
 .Home {
   @extend %minMaxWidth;
+
   margin: 0 auto;
+  @extend %paddingSection;
 
   height: 100vh;
-  padding: 40px 120px;
+
   display: flex;
   align-items: center;
+
+  @include mediaMaxWidth($tabletWidth) {
+    flex-direction: column;
+  }
 
   &__info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
 
     flex-grow: 1;
@@ -19,6 +26,14 @@
 
   &__name {
     font-size: clamp(48px, 5vw, 80px);
+  }
+
+  &__developer {
+    font-size: clamp(16px, 3vw, 36px);
+
+    &-span {
+      white-space: nowrap;
+    }
   }
 
   &__image {
@@ -30,7 +45,20 @@
     background-image: url('../../images/efdalSketch.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; 
+    background-size: cover;
+
+    transition: transform $transitionTime
+      filter $transitionTime;
+
+    @include mediaMaxWidth {
+      transform: scale(80%);
+    }
+
+    @include mediaMaxWidth($tabletWidth) {
+      height: 300px;
+      width: 300px;
+      transform: unset;
+    }
 
     &:hover {
       background-image: url('../../images/efdalImg.jpg');

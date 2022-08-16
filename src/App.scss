@@ -1,6 +1,9 @@
 @import './utils/main.scss';
 
 .App {
+  @extend %minMaxWidth;
+  margin: 0 auto;
+
   background-color: $c-cultured;
   color: $c-eerieBlack;
 
