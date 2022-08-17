@@ -4,6 +4,7 @@ import { useTheme } from '../../context/ThemeProvider';
 import { navComponents } from '../NavBar/NavBar';
 import './Menu.scss';
 import ThemeIcon from '../ThemeIcon/ThemeIcon';
+import HamburgerIcon from '../HamburgerIcon/HamburgerIcon';
 
 type Props = {
   isDesktop: boolean;
@@ -32,25 +33,7 @@ export const Menu: React.FC<Props> = ({isDesktop}) => {
 
   return (
     <div>
-      <button 
-        className={cn("Hamburger", {"Hamburger--dark": isDarkTheme})}
-        onClick={menuHandler}
-      >
-        <div className={cn("Hamburger__lines Hamburger__line1", {
-            "Hamburger__lines--dark": isDarkTheme,
-            "Hamburger__line1--dark": isDarkTheme,
-          })} 
-        />
-        <div className={cn("Hamburger__lines Hamburger__line2", {
-            "Hamburger__lines--dark": isDarkTheme,
-            "Hamburger__line2--dark": isDarkTheme,
-          })} 
-        />
-        <div className="Hamburger__line3">
-          <div className={cn("Hamburger__line3--left", {"Hamburger__line3--left--dark": isDarkTheme})} />
-          <div className={cn("Hamburger__line3--right", {"Hamburger__line3--right--dark": isDarkTheme})} />
-        </div>
-      </button>
+      <HamburgerIcon menuHandler={menuHandler} />
 
       <menu className={cn("Menu", {"Menu__closed": !isMenuOpen, "Menu__open": isMenuOpen})} id="Menu">
         <ul className="Menu__list">
