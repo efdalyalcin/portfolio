@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { useTheme } from '../../context/ThemeProvider';
 import cn from 'classnames';
 import './NavBar.scss';
-import './ThemeIcon.scss';
 import { Menu } from '../Menu/Menu';
+import ThemeIcon from '../ThemeIcon/ThemeIcon';
 
 export const navComponents = [
   {id: 1, name: 'About'},
@@ -13,7 +13,7 @@ export const navComponents = [
 ];
 
 export default function NavBar() {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme } = useTheme();
 
   const [isDesktop, setDesktop] = useState(window.innerWidth >= 768);
 
@@ -44,19 +44,7 @@ export default function NavBar() {
 
       {isDesktop && (
         <div className="NavBar__list">
-          <div 
-            className={cn("ThemeIcon", 
-              {'ThemeIcon--dark': isDarkTheme})}
-            onClick={toggleTheme} 
-          >
-            <div className="ThemeIcon__sun" />
-            <div className="ThemeIcon__moon" />
-            <div className={cn("ThemeIcon__cover", {
-                "ThemeIcon__cover--light": !isDarkTheme,
-                "ThemeIcon__cover--dark": isDarkTheme,
-              })} 
-            />
-          </div>
+          <ThemeIcon />
 
           {navComponents.map((comp) => (
             <a 

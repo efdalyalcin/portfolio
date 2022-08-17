@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react';
 import { useTheme } from '../../context/ThemeProvider';
 import { navComponents } from '../NavBar/NavBar';
 import './Menu.scss';
-import '../NavBar/ThemeIcon.scss';
+import ThemeIcon from '../ThemeIcon/ThemeIcon';
 
 type Props = {
   isDesktop: boolean;
 }
 
 export const Menu: React.FC<Props> = ({isDesktop}) => {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuHandler = () => {
@@ -73,17 +73,9 @@ export const Menu: React.FC<Props> = ({isDesktop}) => {
         </ul>
 
         <div 
-            className={cn("ThemeIcon", "Menu__themeIcon",
-              {'ThemeIcon--dark': isDarkTheme})}
-            onClick={toggleTheme} 
+            className="Menu__themeIcon"
           >
-            <div className="ThemeIcon__sun" />
-            <div className="ThemeIcon__moon" />
-            <div className={cn("ThemeIcon__cover", {
-                "ThemeIcon__cover--light": !isDarkTheme,
-                "ThemeIcon__cover--dark": isDarkTheme,
-              })} 
-            />
+            <ThemeIcon />
           </div>
 
         <button 
