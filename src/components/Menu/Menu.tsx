@@ -3,14 +3,15 @@ import { useEffect, useState } from 'react';
 import { useTheme } from '../../context/ThemeProvider';
 import { navComponents } from '../NavBar/NavBar';
 import './Menu.scss';
-import '../NavBar/ThemeIcon.scss';
+import ThemeIcon from '../ThemeIcon/ThemeIcon';
+import HamburgerIcon from '../HamburgerIcon/HamburgerIcon';
 
 type Props = {
   isDesktop: boolean;
 }
 
 export const Menu: React.FC<Props> = ({isDesktop}) => {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuHandler = () => {
@@ -32,25 +33,7 @@ export const Menu: React.FC<Props> = ({isDesktop}) => {
 
   return (
     <div>
-      <button 
-        className={cn("Hamburger", {"Hamburger--dark": isDarkTheme})}
-        onClick={menuHandler}
-      >
-        <div className={cn("Hamburger__lines Hamburger__line1", {
-            "Hamburger__lines--dark": isDarkTheme,
-            "Hamburger__line1--dark": isDarkTheme,
-          })} 
-        />
-        <div className={cn("Hamburger__lines Hamburger__line2", {
-            "Hamburger__lines--dark": isDarkTheme,
-            "Hamburger__line2--dark": isDarkTheme,
-          })} 
-        />
-        <div className="Hamburger__line3">
-          <div className={cn("Hamburger__line3--left", {"Hamburger__line3--left--dark": isDarkTheme})} />
-          <div className={cn("Hamburger__line3--right", {"Hamburger__line3--right--dark": isDarkTheme})} />
-        </div>
-      </button>
+      <HamburgerIcon menuHandler={menuHandler} />
 
       <menu className={cn("Menu", {"Menu__closed": !isMenuOpen, "Menu__open": isMenuOpen})} id="Menu">
         <ul className="Menu__list">
@@ -73,17 +56,9 @@ export const Menu: React.FC<Props> = ({isDesktop}) => {
         </ul>
 
         <div 
-            className={cn("ThemeIcon", "Menu__themeIcon",
-              {'ThemeIcon--dark': isDarkTheme})}
-            onClick={toggleTheme} 
+            className="Menu__themeIcon"
           >
-            <div className="ThemeIcon__sun" />
-            <div className="ThemeIcon__moon" />
-            <div className={cn("ThemeIcon__cover", {
-                "ThemeIcon__cover--light": !isDarkTheme,
-                "ThemeIcon__cover--dark": isDarkTheme,
-              })} 
-            />
+            <ThemeIcon />
           </div>
 
         <button 
