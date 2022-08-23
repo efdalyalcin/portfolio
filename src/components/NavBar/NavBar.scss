@@ -72,6 +72,8 @@
   }
 
   &__item {
+    position: relative;
+
     color: $c-eerieBlack;
     transition: color $transitionTime;
 

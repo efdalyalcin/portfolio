@@ -14,3 +14,7 @@
     padding: $sectionPaddingMobileVer $sectionPaddingMobileHor;
   }
 }
+
+%fontSizeSectionTitle {
+  font-size: clamp(16px, 3vw, 36px);
+}

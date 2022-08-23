@@ -21,7 +21,7 @@ export default function NavBar() {
     window.scrollTo({
       top: 0,
     });
-};
+  };
 
   const updateMedia = () => {
     setDesktop(window.innerWidth >= 768);
