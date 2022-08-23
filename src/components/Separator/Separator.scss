@@ -1,0 +1,16 @@
+@import '../../utils/main.scss';
+
+.Separator {
+  position: relative;
+  top: -8px;
+
+  width: 100%;
+  height: 16px;
+
+  background-color: $c-blackShadows;
+  transition: background-color $transitionTime;
+
+  &--dark {
+    background-color: $c-bloodRed;
+  }
+}
