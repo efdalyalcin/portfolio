@@ -1,6 +1,9 @@
 @import '../../utils/main.scss';
 
 .Separator {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  
   position: relative;
   top: -8px;
 
