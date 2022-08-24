@@ -81,6 +81,8 @@
       color: $c-cultured;
     }
 
+    @include underlineAnimation;
+
     &:hover {
       color: $c-imperialRed;
     }

@@ -14,11 +14,11 @@ export default function About() {
           I started coding as a hobby, which in time possessed me. 
           I left my career to do what I love doing. 
           Turns out that I am happy when I am creating and learning at the same time.
-          Please feel free to 
+          Please feel free to &nbsp;
           <a href="mailto: yalcinefdal@gmail.com" className="About__contact">
             contact
           </a> 
-          if you have sth interesting
+          &nbsp; if you have sth interesting.
         </p>
       </article>
     </section>

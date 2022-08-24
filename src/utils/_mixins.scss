@@ -10,3 +10,28 @@
     @content
   }
 }
+
+@mixin underlineAnimation($color: $c-imperialRed, $height: 2px) {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    height: $height;
+
+    position: absolute;
+    bottom: -$height;
+    left: 0;
+    right: 0;
+    background-color: $color;
+
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform $transitionTime;
+  }
+
+  &:hover::after {
+    transform: scale(1);
+    transform-origin: bottom left;
+  }
+}
