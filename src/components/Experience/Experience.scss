@@ -1,3 +1,6 @@
+@import '../../utils/main.scss';
+
 .Experience {
-  height: 1000px;
+  height: 100vh;
+  @extend %minMaxWidth, %paddingSection;
 }
