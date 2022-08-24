@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.12409fde.css",
-    "main.js": "/portfolio/static/js/main.c719cc5b.js",
+    "main.css": "/portfolio/static/css/main.89bafa41.css",
+    "main.js": "/portfolio/static/js/main.145d42ef.js",
     "static/media/efdalImg.jpg": "/portfolio/static/media/efdalImg.2d27f9e5184793d9ebc8.jpg",
     "static/media/efdalSketch.jpg": "/portfolio/static/media/efdalSketch.eb052147907fde6698d1.jpg",
     "static/media/DynaPuff-SemiBold.ttf": "/portfolio/static/media/DynaPuff-SemiBold.7d5a22ede4ba1ef762c9.ttf",
     "static/media/DynaPuff-Regular.ttf": "/portfolio/static/media/DynaPuff-Regular.56fde79e6a4cd9651e99.ttf",
     "static/media/DynaPuff-Bold.ttf": "/portfolio/static/media/DynaPuff-Bold.ef8a25f87f5756f384f5.ttf",
     "static/media/moon.svg": "/portfolio/static/media/moon.354ec79e94d237a8198f.svg",
+    "static/media/linkedIn-icon.svg": "/portfolio/static/media/linkedIn-icon.3287e28ce0178e152d1f93cedbc84cbb.svg",
     "static/media/sun.svg": "/portfolio/static/media/sun.0117de3960fb5aa9cbca.svg",
     "index.html": "/portfolio/index.html",
-    "main.12409fde.css.map": "/portfolio/static/css/main.12409fde.css.map",
-    "main.c719cc5b.js.map": "/portfolio/static/js/main.c719cc5b.js.map"
+    "main.89bafa41.css.map": "/portfolio/static/css/main.89bafa41.css.map",
+    "main.145d42ef.js.map": "/portfolio/static/js/main.145d42ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.12409fde.css",
-    "static/js/main.c719cc5b.js"
+    "static/css/main.89bafa41.css",
+    "static/js/main.145d42ef.js"
   ]
 }
