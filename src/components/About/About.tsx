@@ -21,6 +21,9 @@ export default function About() {
           &nbsp; if you have sth interesting.
         </p>
       </article>
+      <div className="About__tech">
+        Tech I work with 
+      </div>
     </section>
   );
 }

@@ -1,0 +1,28 @@
+@import '../../utils/main.scss';
+
+.ContactBar {
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+
+  // background-color: aqua;
+
+  &__link {
+    display: block;
+    @extend %iconSize;
+  }
+
+  &__icon {
+    @extend %iconSize;
+    border-radius: 50%;
+    // background-position: center;
+    // background-repeat: cover;
+
+    transform: translateY(0);
+    transition: transform $transitionTime;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}

@@ -6,6 +6,7 @@ import cn from 'classnames';
 import { useTheme } from './context/ThemeProvider';
 import Home from './components/Home/Home';
 import Separator from './components/Separator/Separator';
+import ContactBar from './components/ContactBar/ContactBar';
 
 function App() {
   const { isDarkTheme } = useTheme();
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className={cn("App", {'App--dark': isDarkTheme})}>
       <NavBar />
+      <ContactBar />
       <Home />
       <Separator />
       <About />
