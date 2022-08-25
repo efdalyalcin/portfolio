@@ -1,5 +1,4 @@
 import './ContactBar.scss';
-import liIcon from '../../images/linkedIn-icon.svg';
 
 export default function ContactBar() {
   return (
@@ -10,11 +9,15 @@ export default function ContactBar() {
         rel="noreferrer"
         className="ContactBar__link"
       >
-        <img 
-          src={liIcon}
-          alt="linkedIn icon"
-          className="ContactBar__icon"
-        />
+        <button className="ContactBar__icon ContactBar__icon--linkedIn" />
+      </a>
+      <a 
+        href="https://wa.me/+905335500869/?text=myText"
+        target="_blank"
+        rel="noreferrer"
+        className="ContactBar__link"
+      >
+        <button className="ContactBar__icon ContactBar__icon--whatsApp" />
       </a>
     </div>
   )

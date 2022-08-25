@@ -5,6 +5,10 @@
   right: 50px;
   bottom: 20px;
 
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
   // background-color: aqua;
 
   &__link {
@@ -14,12 +18,33 @@
 
   &__icon {
     @extend %iconSize;
-    border-radius: 50%;
-    // background-position: center;
-    // background-repeat: cover;
+    border: 2px solid transparent;
+    border-radius: 20%;
+
+    background-position: center;
+    background-repeat: cover;
+    background-repeat: no-repeat;
+    background-color: $c-cultured;
 
     transform: translateY(0);
-    transition: transform $transitionTime;
+    transition: transform $transitionTime,
+      background-color $transitionTime;
+
+    &--linkedIn {
+      background-image: url("../../images/linkedIn-icon.svg");
+
+      &:hover {
+        background-color: #0e76a8;
+      }
+    }
+
+    &--whatsApp {
+      background-image: url("../../images/whatsapp.svg");
+
+      &:hover {
+        background-color: #25d366;
+      }
+    }
 
     &:hover {
       transform: translateY(-4px);
