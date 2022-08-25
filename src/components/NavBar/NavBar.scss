@@ -72,12 +72,16 @@
   }
 
   &__item {
+    position: relative;
+
     color: $c-eerieBlack;
     transition: color $transitionTime;
 
     &--dark {
       color: $c-cultured;
     }
+
+    @include underlineAnimation;
 
     &:hover {
       color: $c-imperialRed;
