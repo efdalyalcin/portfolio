@@ -12,7 +12,7 @@ export default function ContactBar() {
         <button className="ContactBar__icon ContactBar__icon--linkedIn" />
       </a>
       <a 
-        href="https://wa.me/+905335500869/?text=myText"
+        href="https://wa.me/0905335500869/?text=myText"
         target="_blank"
         rel="noreferrer"
         className="ContactBar__link"
