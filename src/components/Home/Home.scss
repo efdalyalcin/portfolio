@@ -1,4 +1,4 @@
-@import '../../utils/main.scss';
+@import '../../style/main.scss';
 
 .Home {
   @extend %minMaxWidth;
@@ -42,7 +42,7 @@
 
     border-radius: 16px;
 
-    background-image: url('../../images/efdalSketch.jpg');
+    background-image: url('../../assets/images/efdalSketch.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -61,7 +61,7 @@
     }
 
     &:hover {
-      background-image: url('../../images/efdalImg.jpg');
+      background-image: url('../../assets/images/efdalImg.jpg');
     }
   }
 }
